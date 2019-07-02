@@ -1,0 +1,18 @@
+.jumbotron {
+    color: black;
+    text-align: center;
+     background-color: darkred;
+}
+
+
+.go {
+    color: white;
+    font-size: 70px;
+}
+
+#sub {
+    color: white;
+}
+#par {
+    color: white;
+}
