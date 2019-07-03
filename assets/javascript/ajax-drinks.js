@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     function drinkCall(query) {
-        baseURL = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?"
+        baseURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?"
 
         params = {
             ingredient: "i="
@@ -12,16 +12,18 @@ $(document).ready(function () {
             url: queryURL,
             method: "GET"
         }).then(function (response) {
-            response.data
-            console.log(response.data)
+            response
+            console.log(response)
+            console.log(response.drinks.length)
+            for (var i=0; i < response.drinks.length;i++){
+                console.log(response.drinks[i].strDrink)
+            }
+        
         });
     }
 
-    drinkCall(gin);
-    console.log(drinkCall(gin));
-    drinkCall(vodka);
-    console.log(drinkCall(vodka));
-    drinkCall(tequila);
-    console.log(drinkCall(tequila))
+    drinkCall("Gin");
+    drinkCall("Vodka");
+
 
 });
