@@ -1,3 +1,8 @@
+* {
+    background-color: darkred;
+    font-family: 'Work Sans', sans-serif;
+}
+
 .jumbotron {
     color: black;
     text-align: center;
