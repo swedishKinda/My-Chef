@@ -1,18 +1,15 @@
 // var zomato_api = "6033cf9c9a435982e202cd2eb5e7716c";
 $(document).ready(function() {
-    $('.multiple-items').slick({
-        dots: true,
-        centerMode: true,
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 1
-      });
+//     $('.multiple-items').slick({
+//         dots: true,
+//         centerMode: true,
+//         infinite: true,
+//         slidesToShow: 3,
+//         slidesToScroll: 1
+//       });
 
 
 // other DOM manipulation functions will go inside document.ready function here...
-
-
-
 
 
 
@@ -38,8 +35,9 @@ function getRandomMeal() {
         }).then(function(response) {
             // do something with the response
             console.log(response);
+            return response;
     });
-    return response;
+    
 }
 
 function getMealWithIngredient(ingredient) {
