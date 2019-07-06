@@ -47,7 +47,7 @@ $(document).ready(function () {
             var ingredients = [];
             for (key in response.drinks[0]) {
                 if (key.includes("strIngredient")) {
-                    if (response.drinks[0][key] !== null && response.drinks[0][key] != ""){
+                    if (response.drinks[0][key] !== null && response.drinks[0][key] != "") {
                         ingredients.push(response.drinks[0][key]);
                     }
 
@@ -58,7 +58,7 @@ $(document).ready(function () {
             var measurements = [];
             for (key in response.drinks[0]) {
                 if (key.includes("strMeasure")) {
-                    if (response.drinks[0][key] !== null && response.drinks[0][key] != "" && response.drinks[0][key] != " "){
+                    if (response.drinks[0][key] !== null && response.drinks[0][key] != "" && response.drinks[0][key] != " ") {
                         measurements.push(response.drinks[0][key]);
                     }
                 }
@@ -73,20 +73,20 @@ $(document).ready(function () {
             drinkImg.addClass('float-right, meal-img');
             $(".display-drink").append(drinkImg);
             var drinkTable = $("<table>");
-            for (var i=0; i < ingredients.length; i++) {
-              var newRow = $("<tr>");
-              var newCell = $("<td>");
-               
-              newCell.addClass('p-2')
-              newCell.text(measurements[i]);
-              newRow.append(newCell);
-    
-              newCell = $("<td>");
-              newCell.addClass('p-2')
-              newCell.text(ingredients[i]);
-              newRow.append(newCell);
-    
-              drinkTable.append(newRow);
+            for (var i = 0; i < ingredients.length; i++) {
+                var newRow = $("<tr>");
+                var newCell = $("<td>");
+
+                newCell.addClass('p-2')
+                newCell.text(measurements[i]);
+                newRow.append(newCell);
+
+                newCell = $("<td>");
+                newCell.addClass('p-2')
+                newCell.text(ingredients[i]);
+                newRow.append(newCell);
+
+                drinkTable.append(newRow);
             }
             $(".display-drink").append(drinkTable);
             $(".display-drink").append(response.drinks[0].strInstructions);
@@ -97,5 +97,9 @@ $(document).ready(function () {
 
     // test drink recipe
     drinkRecipe("12402");
+
+    $("#drinks").on("click", function () {
+        console.log("I've been clicked")
+    })
 
 });
