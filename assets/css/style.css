@@ -9,7 +9,6 @@
      background-color: darkred;
 }
 
-
 .go {
     color: white;
     font-size: 70px;
@@ -33,25 +32,12 @@ h3 {
     text-align: center;
 }
 
-@media only screen and (min-width: 768px) {
+.first-form {
+    margin:auto;
+    text-align: center;
+}
 
-    .container {
-        width: 600px;
-        margin: 0 auto;
-    }
-    
-    .heading {
-        padding: 20px 0px 0px;
-    }
-    
-    
-    .par {
-        padding: 20px 0px 0px;
-        
-    }
-    
-    .btn.btn-primary.btn-lg {
-        padding-top: 30px;
-    }
-    
-    }
+.second-form {
+    margin:auto;
+    text-align: center;
+}

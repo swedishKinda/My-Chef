@@ -1,18 +1,16 @@
 // var zomato_api = "6033cf9c9a435982e202cd2eb5e7716c";
-$(document).ready(function () {
-  $('.multiple-items').slick({
-    dots: true,
-    centerMode: true,
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1
-  });
+$(document).ready(function() {
+//     $('.multiple-items').slick({
+//         dots: true,
+//         centerMode: true,
+//         infinite: true,
+//         slidesToShow: 3,
+//         slidesToScroll: 1
+//       });
+
 
 
   // other DOM manipulation functions will go inside document.ready function here...
-
-
-
 
 
 
@@ -27,19 +25,22 @@ $(document).ready(function () {
 
 
 function getRandomMeal() {
-  // AJAX call to MealDB API to return a random meal
-  var queryURL = "https://www.themealdb.com/api/json/v1/1/random.php";
+    // AJAX call to MealDB API to return a random meal
+    var queryURL = "https://www.themealdb.com/api/json/v1/1/random.php";
 
-  $.ajax({
-    url: queryURL,
-    method: "GET",
+    $.ajax ({
+        url: queryURL,
+        method: "GET",
+    
+        // 
+        }).then(function(response) {
+            // do something with the response
+            console.log(response);
+            return response;
+    });
+    
 
-    // 
-  }).then(function (response) {
-    // do something with the response
-    console.log(response);
-  });
-  return response;
+  
 }
 
 function getMealWithIngredient(ingredient) {
