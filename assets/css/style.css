@@ -21,3 +21,26 @@
 #par {
     color: white;
 }
+
+@media only screen and (min-width: 768px) {
+
+    .container {
+        width: 600px;
+        margin: 0 auto;
+    }
+    
+    .heading {
+        padding: 20px 0px 0px;
+    }
+    
+    
+    .par {
+        padding: 20px 0px 0px;
+        
+    }
+    
+    .btn.btn-primary.btn-lg {
+        padding-top: 30px;
+    }
+    
+    }
