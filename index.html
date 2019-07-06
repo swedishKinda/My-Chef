@@ -6,21 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>My Chef</title>
 
-    <!-- Stylesheet links -->
-    <link rel="stylesheet" 
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
-          crossorigin="anonymous">
+    <title>Go Tour</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" type="text/css" 
-          href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:600&display=swap" rel="stylesheet">
 
     <!-- Javascript Links -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script
+        src="http://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="assets/javascript/ajax-drinks.js"></script>
     <script src="assets/javascript/logic.js"></script>
 
@@ -35,14 +34,56 @@
             <p id="sub"> Your next delicious meal awaits! .</p>
             <hr>
             <p id="par">Tell us what you have and we'll what to make .</p>
-            <a class="btn btn-primary btn-lg" href="#" role="button">Random meal</a>
         </div>
       </div>
     </div>
 
     <div class="row">
       <div class="col">
-        <!-- Form dovs will go in this area -->
+        <div class="first-form">
+          <h2>What best describes your current situation?</h2>
+          <div class="row">
+            <div class="col">
+              <button class="btn btn-primary" id="meals">I'm Hungry</button>
+            </div>
+            <div class="col">
+                <button class="btn btn-primary" id="drinks">I'm Thirsty</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="meals second-form">
+          <div class="row">
+            <div class="col">
+              <button class="btn btn-primary" id="random-meal">Give me a random meal!</button>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col">
+              <h4>Search for a meal by ingredient</h4>
+              <input type='text' id='meal-ingredient-search' >
+              <button class="btn btn-primary" id='meal-by-ingredient'>Search</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="drinks second-form">
+            <div class="row">
+              <div class="col">
+                <button class="btn btn-primary" id="random-drink">Give me a random cocktail!</button>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col">
+                <h4>Search for a cocktail by ingredient</h4>
+                <input type='text' id='drink-ingredient-search' >
+                <button class="btn btn-primary" id='meal-by-ingredient'>Search</button>
+              </div>
+            </div>
+          </div>
+
       </div>
     </div>
 
