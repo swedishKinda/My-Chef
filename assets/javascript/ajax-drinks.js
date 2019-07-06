@@ -68,6 +68,29 @@ $(document).ready(function () {
             var instructions = response.drinks[0].strInstructions;
             console.log(instructions);
 
+            var drinkImg = $("<img>");
+            drinkImg.attr('src', response.drinks[0].strDrinkThumb);
+            drinkImg.addClass('float-right, meal-img');
+            $(".display-drink").append(drinkImg);
+            var drinkTable = $("<table>");
+            for (var i=0; i < ingredients.length; i++) {
+              var newRow = $("<tr>");
+              var newCell = $("<td>");
+               
+              newCell.addClass('p-2')
+              newCell.text(measurements[i]);
+              newRow.append(newCell);
+    
+              newCell = $("<td>");
+              newCell.addClass('p-2')
+              newCell.text(ingredients[i]);
+              newRow.append(newCell);
+    
+              drinkTable.append(newRow);
+            }
+            $(".display-drink").append(drinkTable);
+            $(".display-drink").append(response.drinks[0].strInstructions);
+
         })
 
     }
