@@ -14,14 +14,14 @@ $(document).ready(function () {
             method: "GET"
         }).then(function (response) {
             // response 
-            console.log(response)
+            // console.log(response)
             // logging the number of drinks in response (object array of drink objects)
-            console.log(response.drinks.length)
+            // console.log(response.drinks.length)
 
             // Returns 10 random drinks of alcohol entered in query
             for (var e = 0; e < 10; e++) {
                 var item = response.drinks[Math.floor(Math.random() * response.drinks.length)];
-                console.log(query + " Drink: " + JSON.stringify(item.strDrink));
+                // console.log(query + " Drink: " + JSON.stringify(item.strDrink));
             }
             // // Returns all drinks of alcohol entered in query
             // // for (var i = 0; i < response.drinks.length; i++) {
@@ -42,7 +42,7 @@ $(document).ready(function () {
             url: queryURL,
             method: "GET"
         }).then(function (response) {
-            console.log(response.drinks);
+            // console.log(response.drinks);
 
             var ingredients = [];
             for (key in response.drinks[0]) {
@@ -53,7 +53,7 @@ $(document).ready(function () {
 
                 }
             }
-            console.log(ingredients)
+            // console.log(ingredients)
 
             var measurements = [];
             for (key in response.drinks[0]) {
@@ -63,10 +63,10 @@ $(document).ready(function () {
                     }
                 }
             }
-            console.log(measurements);
+            // console.log(measurements);
 
             var instructions = response.drinks[0].strInstructions;
-            console.log(instructions);
+            // console.log(instructions);
 
             var drinkImg = $("<img>");
             drinkImg.attr('src', response.drinks[0].strDrinkThumb);
