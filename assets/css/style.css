@@ -1,10 +1,10 @@
-* {
+body {
     background-color: darkred;
     font-family: 'Work Sans', sans-serif;
+    color: whitesmoke;
 }
 
 .jumbotron {
-    color: black;
     text-align: center;
      background-color: darkred;
 }
@@ -40,4 +40,25 @@ h3 {
 .second-form {
     margin:auto;
     text-align: center;
+}
+
+.meals {
+    display: none;
+}
+
+.drinks {
+    display:none;
+}
+
+.display-slick {
+    margin:auto;
+    /* display: none; */
+}
+
+.carousel-item {
+    padding: 5px;
+}
+.carousel-img {
+    height: 200px;
+    width: 200px;
 }
