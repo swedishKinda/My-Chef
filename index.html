@@ -2,109 +2,106 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-<<<<<<< HEAD
+  <title>Go Chef</title>
 
-    <title>Go Tour</title>
-=======
-    <title>Go Chef</title>
+  <!-- Stylesheet CDN Links -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 
-    <!-- Stylesheet CDN Links -->
->>>>>>> 541d68ce8ea41c7f0f7e67fe0a00bbed18fcad0f
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" >
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans:600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" >
-    <link rel="stylesheet" href="assets/css/style.css">
-    
 
-    <!-- Javascript Links -->
-    <script
-        src="http://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-        crossorigin="anonymous"></script>    
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="assets/javascript/ajax-drinks.js"></script>
-    <script src="assets/javascript/logic.js"></script>
+  <!-- Javascript Links -->
+  <script src="http://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="assets/javascript/ajax-drinks.js"></script>
+  <script src="assets/javascript/logic.js"></script>
 
 </head>
 
 <body>
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <div class="jumbotron">           
-            <strong><h1 class="heading">My Chef</h1></strong>
+  <!-- div for all around background color -->
+  <div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="jumbotron">
+            <strong>
+              <h1 class="heading">My Chef</h1>
+            </strong>
             <p id="sub"> Your next delicious meal awaits! .</p>
             <hr>
             <p id="par">Tell us what you have and we'll what to make .</p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="col">
-        <div class="first-form">
-          <h2>What best describes your current situation?</h2>
-          <div class="row">
-            <div class="col">
-              <button class="btn btn-primary" id="meals">I'm Hungry</button>
-            </div>
-            <div class="col">
-                <button class="btn btn-primary" id="drinks">I'm Thirsty</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="meals second-form">
-          <div class="row">
-            <div class="col">
-              <button class="btn btn-primary" id="random-meal">Give me a random meal!</button>
-            </div>
-          </div>
-          <hr>
-          <div class="row">
-            <div class="col">
-              <h4>Search for a meal by ingredient</h4>
-              <input type='text' id='meal-ingredient-search' >
-              <button class="btn btn-primary" id='meal-by-ingredient'>Search</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="drinks second-form">
+      <div class="row">
+        <div class="col">
+          <div class="first-form">
+            <h2>What best describes your current situation?</h2>
             <div class="row">
               <div class="col">
-                <button class="btn btn-primary" id="random-drink">Give me a random cocktail!</button>
+                <button class="btn btn-primary btn-dark" id="meals">I'm Hungry</button>
+              </div>
+              <div class="col">
+                <button class="btn btn-primary btn-dark" id="drinks">I'm Thirsty</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="meals second-form">
+            <div class="row">
+              <div class="col">
+                <button class="btn btn-primary btn-dark" id="random-meal">Give me a random meal!</button>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col">
+                <h4>Search for a meal by ingredient</h4>
+                <input type='text' id='meal-ingredient-search'>
+                <button class="btn btn-primary btn-dark" id='meal-by-ingredient'>Search</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="drinks second-form">
+            <div class="row">
+              <div class="col">
+                <button class="btn btn-primary btn-dark" id="random-drink">Give me a random cocktail!</button>
               </div>
             </div>
             <hr>
             <div class="row">
               <div class="col">
                 <h4>Search for a cocktail by ingredient</h4>
-                <input type='text' id='drink-ingredient-search' >
-                <button class="btn btn-primary" id='meal-by-ingredient'>Search</button>
+                <input type='text' id='drink-ingredient-search'>
+                <button class="btn btn-primary btn-dark" id='meal-by-ingredient'>Search</button>
               </div>
             </div>
           </div>
 
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col">
-        <div class="display-slick">
-
-
         </div>
       </div>
-    </div>
 
-    <div class="row">
+      <div class="row">
+        <div class="col">
+          <div class="display-slick">
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
         <div class="col">
           <div class="display-single">
             <!-- Ajax response of a single recipe will be displayed here -->
@@ -112,8 +109,9 @@
         </div>
       </div>
 
-<!-- Close the container div -->
-  </div> 
+      <!-- Close the container div -->
+    </div>
+  </div>
 
 </body>
 
