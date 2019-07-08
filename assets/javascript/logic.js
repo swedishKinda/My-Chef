@@ -1,12 +1,12 @@
 // var zomato_api = "6033cf9c9a435982e202cd2eb5e7716c";
 $(document).ready(function() {
-    $('.display-slick').slick({
-        dots: true,
-        centerMode: true,
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 1
-      });
+    // $('.display-slick').slick({
+    //     dots: true,
+    //     centerMode: true,
+    //     infinite: true,
+    //     slidesToShow: 3,
+    //     slidesToScroll: 1
+    //   });
   
 // set up DOM manipulation variables:
 var firstForm = $(".first-form");
@@ -40,7 +40,10 @@ var mealByIngredientButton = $("#meal-by-ingredient");
 
   });
 
-
+  $(document).on("click", ".carousel-item" , function() {
+    var temp = $(this).attr('data-meal-id');
+    singleMeal(temp); 
+});
 
 
 
@@ -99,7 +102,7 @@ function singleMeal(mealID) {
   }).then(function (response) {
     // do something with the response
     console.log(response)
-    
+    displaySingleMeal(response)
   });
 }
 
@@ -159,19 +162,20 @@ function displayMultipleMeals (mealArray) {
    newImg.attr('src', mealArray[i].strMealThumb)
    
    newDiv.addClass('carousel-item');
+   newDiv.attr('data-meal-id', mealArray[i].idMeal)
    newDiv.append(newImg);
    newDiv.append(mealArray[i].strMeal)
 
    carouselDiv.append(newDiv);
   }
    
-  // carouselDiv.slick({
-  //   dots: true,
-  //   centerMode: true,
-  //   infinite: true,
-  //   slidesToShow: 3,
-  //   slidesToScroll: 1
-  // });
+  carouselDiv.slick({
+    dots: true,
+    centerMode: true,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1
+  });
 
   carouselDiv.show();
 
