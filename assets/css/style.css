@@ -1,6 +1,6 @@
 body {
     background-color: darkred;
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Didact Gothic', sans-serif;
     color: whitesmoke;
 }
 
@@ -61,4 +61,21 @@ h3 {
 .carousel-img {
     height: 200px;
     width: 200px;
+}
+
+.heading {
+    font-size: 120px;
+    font-family: 'Work Sans', sans-serif;
+}
+
+#sub {
+    font-size: 25px;
+}
+
+#par {
+    font-size: 25px;
+}
+
+.btn {
+    font-family: 'Maven Pro', sans-serif;
 }
