@@ -6,12 +6,14 @@ $(document).ready(function () {
     var drinkCarousel = $(".display-slick");
     var randomDrinkButton = $("#random-drink");
     var drinkByIngredientButton = $("#drink-by-ingredient");
+    var resetButton = $("#reset-button");
 
     // on click listeners & functions for DOM buttons
 
     $("#drinks").on("click", function () {
         firstForm.hide();
         drinksForm.show();
+        resetButton.show();
     })
 
     randomDrinkButton.on("click", function () {
@@ -26,7 +28,7 @@ $(document).ready(function () {
         else {
             getDrinkWithIngredient(input);
             drinksForm.hide();
-            drinkCarousel.show();
+            displayCarousel.show();
         }
     });
 

@@ -4,6 +4,10 @@ body {
     color: whitesmoke;
 }
 
+.container {
+    margin-bottom: 65px;
+}
+
 .jumbotron {
     text-align: center;
      background-color: darkred;
@@ -101,4 +105,18 @@ h3 {
 
 #meals {
     margin-bottom: 10px
+}
+
+.footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    height: 60px; 
+    background-color: darkred;
+    text-align: center;
+}
+
+#reset-button{ 
+    margin-top: 10px;
+    display:none;
 }
