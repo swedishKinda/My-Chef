@@ -1,5 +1,5 @@
 body {
-    background-color: black;
+    background-image: url("https://media.fromthegrapevine.com/assets/images/2014/9/shutterstock_herbs-crop2.jpg.480x0_q71_crop-scale.jpg");
     font-family: 'Didact Gothic', sans-serif;
     color: whitesmoke;
 }
@@ -101,4 +101,16 @@ h3 {
 
 #meals {
     margin-bottom: 10px
+}
+
+.display-single {
+    background-color: darkred;
+}
+
+h3 {
+    font-family: 'Cedarville Cursive', cursive;
+}
+
+#ingredient-search {
+    margin-bottom: 30px;
 }
