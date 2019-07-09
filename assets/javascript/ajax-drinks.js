@@ -1,5 +1,24 @@
 $(document).ready(function () {
 
+    // DOM manipulation variables:
+    var firstForm = $(".first-form");
+    var drinksForm = $(".drinks");
+    var drinkCarousel = $(".display-slick");
+    var randomDrinkButton = $("#random-drink");
+    var drinkByIngredientButton = $("#drink-by-ingredient");
+
+    // on click listeners & functions for DOM buttons
+
+    $("#drinks").on("click", function () {
+        firstForm.hide();
+        drinksForm.show();
+    })
+
+    randomDrinkButton.on("click", function (){
+        
+    })
+
+
     function drinkCall(query) {
         var baseURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?"
 
@@ -13,15 +32,11 @@ $(document).ready(function () {
             url: queryURL,
             method: "GET"
         }).then(function (response) {
-            // response 
-            // console.log(response)
-            // logging the number of drinks in response (object array of drink objects)
-            // console.log(response.drinks.length)
 
             // Returns 10 random drinks of alcohol entered in query
             for (var e = 0; e < 10; e++) {
                 var item = response.drinks[Math.floor(Math.random() * response.drinks.length)];
-                // console.log(query + " Drink: " + JSON.stringify(item.strDrink));
+                console.log(query + " Drink: " + JSON.stringify(item.strDrink));
             }
             // // Returns all drinks of alcohol entered in query
             // // for (var i = 0; i < response.drinks.length; i++) {
