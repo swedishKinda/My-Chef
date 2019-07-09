@@ -66,6 +66,7 @@ h3 {
 }
 
 .carousel-item {
+    /* text-align: center; */
     padding: 5px;
 }
 .carousel-img {

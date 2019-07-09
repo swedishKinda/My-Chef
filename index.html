@@ -42,70 +42,72 @@
           <p id="par">Tell us what ingredients you have and we will pick something</p>
         </div>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="col">
-        <div class="first-form">
-          <h2>What best describes your current situation?</h2>
-          <div class="row">
-            <div class="col">
-              <button class="btn btn-primary" id="meals">I'm Hungry</button>
+      <div class="row">
+        <div class="col">
+          <div class="first-form">
+            <h2>What best describes your current situation?</h2>
+            <div class="row">
+              <div class="col">
+                <button class="btn btn-primary btn-dark" id="meals">I'm Hungry</button>
+              </div>
+              <div class="col">
+                <button class="btn btn-primary btn-dark" id="drinks">I'm Thirsty</button>
+              </div>
             </div>
-            <div class="col">
-              <button class="btn btn-primary" id="drinks">I'm Thirsty</button>
+          </div>
+
+          <div class="meals second-form">
+            <div class="row">
+              <div class="col">
+                <button class="btn btn-primary btn-dark" id="random-meal">Give me a random meal!</button>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col">
+                <h4>Search for a meal by ingredient</h4>
+                <input type='text' id='meal-ingredient-search'>
+                <button class="btn btn-primary btn-dark" id='meal-by-ingredient'>Search</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="drinks second-form">
+            <div class="row">
+              <div class="col">
+                <button class="btn btn-primary btn-dark" id="random-drink">Give me a random cocktail!</button>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col">
+                <h4>Search for a cocktail by ingredient</h4>
+                <input type='text' id='drink-ingredient-search'>
+                <button class="btn btn-primary btn-dark" id='meal-by-ingredient'>Search</button>
+
+              </div>
             </div>
           </div>
         </div>
-
-        <div class="meals second-form">
-          <div class="row">
-            <div class="col">
-              <button class="btn btn-primary" id="random-meal">Random Meal</button>
-            </div>
-          </div>
-          <hr>
-          <div class="row">
-            <div class="col" id="meal-search">
-              <h4>Search for a meal by ingredient</h4>
-              <input type='text' id='meal-ingredient-search'>
-              <button class="btn btn-primary" id='meal-by-ingredient'>Search</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="drinks second-form">
-          <div class="row">
-            <div class="col">
-              <button class="btn btn-primary" id="random-drink">Give me a random cocktail!</button>
-            </div>
-          </div>
-          <hr>
-          <div class="row">
-            <div class="col">
-              <h4>Search for a cocktail by ingredient</h4>
-              <input type='text' id='drink-ingredient-search'>
-              <button class="btn btn-primary" id='meal-by-ingredient'>Search</button>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col">
-        <div class="display-slick">
-
 
         </div>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="col">
-        <div class="display-single">
-          <!-- Ajax response of a single recipe will be displayed here -->
+      <div class="row">
+        <div class="col">
+          <div class="display-slick">
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="display-single">
+            <!-- Ajax response of a single recipe will be displayed here -->
+          </div>
         </div>
       </div>
     </div>
