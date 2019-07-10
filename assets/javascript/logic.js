@@ -1,4 +1,8 @@
-// var zomato_api = "6033cf9c9a435982e202cd2eb5e7716c";
+var state = {
+  slickUsed: false,
+  lastView: ""
+}
+
 $(document).ready(function() {
     // $('.display-slick').slick({
     //     dots: true,
@@ -22,12 +26,14 @@ var drinkByIngredientButton = $("#drink-by-ingredient");
 
   // other DOM manipulation functions will go inside document.ready function here...
   $("#meals").on("click", function () {
+    state.lastView = ".meals";
     firstForm.hide();
     mealsForm.show();
     resetButton.show();
   })
 
   $("#drinks").on("click", function () {
+    state.lastView = ".drinks";
     firstForm.hide();
     drinksForm.show();
     resetButton.show();
@@ -78,14 +84,22 @@ var drinkByIngredientButton = $("#drink-by-ingredient");
 });
 
 resetButton.on('click', function() {
-  resetButton.hide();
-  displayCarousel.slick('unslick');
+  if(state.slickUsed) {
+    displayCarousel.slick('unslick');
+   state.slickUsed = false;
+  }
   displayCarousel.empty();
   displayCarousel.hide();
   $(".display-single").empty();
   firstForm.show();
   mealsForm.hide();
+  drinksForm.hide();
+ 
+ })
 
+$("#clear-alert").on('click', function() {
+  $(".my-alert").hide();
+  $(state.lastView).show();
 })
 
 
@@ -140,7 +154,7 @@ function getMealWithIngredient(ingredient) {
     // do something with the response
     // error handling for when no meals are found in the DB for the particular ingredient. 
     if (response.meals === null) {
-      console.log('no meals found');
+      showAlert('no meals found');
     }
     else {
       console.log(response.meals)
@@ -243,8 +257,6 @@ function displaySingleDrink(response) {
           }
       }
   }
-  var instructions = response.drinks[0].strInstructions;
-
   var drinkImg = $("<img>");
   drinkImg.attr('src', response.drinks[0].strDrinkThumb);
   drinkImg.addClass('float-right, meal-img');
@@ -271,7 +283,7 @@ function displaySingleDrink(response) {
 }
 
 function displayMultipleMeals (mealArray) {
-   //  <div class="carousel-item"><img src="https://via.placeholder.com/200" class="carousel-img">Slide 1</div>
+ state.slickUsed = true;
    var carouselDiv = $(".display-slick");
 
   for (var i=0; i < mealArray.length; i++) {
@@ -314,8 +326,8 @@ function getDrinkWithIngredient(ingredient) {
   }).then(function (response) {
       // do something with the response
       // error handling for when no drinks are found in the DB for the particular ingredient. 
-      if (response.drinks === null) {
-          console.log('no drinks found');
+      if (response.drinks === undefined) {
+          showAlert('no drinks found');
       }
       else {
           console.log(response.drinks)
@@ -325,6 +337,7 @@ function getDrinkWithIngredient(ingredient) {
 }
 
 function displayMultipleDrinks(drinkArray) {
+ state.slickUsed = true;
   var carouselDiv = $(".display-slick");
 
   for (var i = 0; i < drinkArray.length; i++) {
@@ -350,4 +363,22 @@ function displayMultipleDrinks(drinkArray) {
   });
 
   carouselDiv.show();
+}
+
+function showAlert(alertText) {
+  // This function shows a modal alert div, and places the alertText into the display div. 
+
+  // define the variables that center the div on the page based on the height and width of the page
+  var alertTop = Math.floor((($(window).height())/2)-50);
+  var alertLeft = Math.floor((($(window).width())/2) - 175);
+
+  // set the alert text
+  $(".alert-text").text(alertText);
+
+  // set the left and top attributes of the div to re-center the div in the wondow
+  $(".my-alert").css('top', alertTop);
+  $(".my-alert").css('left', alertLeft);
+
+  //show the div as a modal alert
+  $(".my-alert").show();
 }
