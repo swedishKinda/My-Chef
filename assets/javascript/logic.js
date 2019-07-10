@@ -234,6 +234,7 @@ function displaySingleMeal(mealToDisplay) {
   }
   mealDisplay.append(mealTable);
   mealDisplay.append(mealToDisplay.meals[0].strInstructions);
+  mealDisplay.append("<div style='clear: both;'></div>");
 }
 
 function displaySingleDrink(response) {
@@ -279,6 +280,7 @@ function displaySingleDrink(response) {
   }
   $(".display-single").append(drinkTable);
   $(".display-single").append(response.drinks[0].strInstructions);
+  $(".display-single").append("<div style='clear: both;'></div>");
 
 }
 
