@@ -120,3 +120,21 @@ h3 {
     margin-top: 10px;
     display:none;
 }
+
+.my-alert {
+    /* Special styling for the alert box */
+    background-color:  darkred;
+    color: black;
+    position:fixed;
+    top: 35%;
+    left: 35%;
+    height: 100px;
+    width: 350px;
+    border: 10px solid white;
+    text-align: center;
+    display:none;
+}
+
+#clear-alert {
+    margin: auto;
+}
