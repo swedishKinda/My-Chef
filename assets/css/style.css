@@ -4,6 +4,10 @@ body {
     color: whitesmoke;
 }
 
+.container {
+    margin-bottom: 65px;
+}
+
 .jumbotron {
     text-align: center;
      background-color: darkred;
@@ -113,4 +117,36 @@ h3 {
 
 #ingredient-search {
     margin-bottom: 30px;
+
+.footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    height: 60px; 
+    background-color: darkred;
+    text-align: center;
+}
+
+#reset-button{ 
+    margin-top: 10px;
+    display:none;
+}
+
+.my-alert {
+    /* Special styling for the alert box */
+    background-color:  darkred;
+    color: black;
+    position:fixed;
+    top: 35%;
+    left: 35%;
+    height: 100px;
+    width: 350px;
+    border: 10px solid white;
+    text-align: center;
+    display:none;
+}
+
+#clear-alert {
+    margin: auto;
+
 }
