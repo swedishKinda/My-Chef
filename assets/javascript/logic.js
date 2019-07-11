@@ -305,10 +305,9 @@ function displayMultipleMeals (mealArray) {
    
   carouselDiv.slick({
     dots: true,
-    centerMode: true,
     infinite: true,
     slidesToShow: 3,
-    slidesToScroll: 1
+    slidesToScroll: 3
   });
 
   carouselDiv.show();
@@ -358,7 +357,6 @@ function displayMultipleDrinks(drinkArray) {
   }
 
   carouselDiv.slick({
-      centerMode: true,
       infinite: true,
       slidesToShow: 4,
       slidesToScroll: 4
