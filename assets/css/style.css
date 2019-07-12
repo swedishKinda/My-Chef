@@ -32,8 +32,9 @@ body {
     background-color: darkred;
     float:right;
     padding: 10px;
-    width: 300px;
-    height: 300px;
+    padding-right: 20px;
+    width: 500px;
+    height: 500px;
 }
 
 h3 {
@@ -52,6 +53,7 @@ h3 {
     background-color: darkred;
     margin:auto;
     text-align: center;
+    padding: 20px;
 }
 
 .meals {
@@ -96,10 +98,6 @@ h3 {
     font-family: 'Maven Pro', sans-serif;
 }
 
-#random-meal {
-    margin-top: 10px
-}
-
 #meal-search {
     margin-bottom: 10px
 }
@@ -110,11 +108,15 @@ h3 {
 
 .display-single {
     background-color: darkred;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 30px;
 }
 
 h3 {
     font-family: 'Cedarville Cursive', cursive;
     padding-top: 15px;
+    font-size: 50px;
 }
 
 #ingredient-search {
