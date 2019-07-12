@@ -113,7 +113,7 @@ var recipeDisplay = $(".display-single");
     displayCarousel.empty();
     displayCarousel.hide();
     // empty the single recipe display
-    recipeDisplay.empty();
+    recipeDisplay.hide();
     // reset display to the initial form
     firstForm.show();
     mealsForm.hide();
@@ -184,7 +184,7 @@ function getMealWithIngredient(ingredient) {
   }).then(function (response) {
     // error handling for when no meals are found in the DB for the particular ingredient. 
     if (response.meals === null) {
-      showAlert('no meals found');
+      showAlert('There were no meals found with that search term. Please try again.');
     }
     else {
       // call the multiple display function to put the meals into the carousel display. 
@@ -208,7 +208,7 @@ function getDrinkWithIngredient(ingredient) {
       // do something with the response
       // error handling for when no drinks are found in the DB for the particular ingredient. 
       if (response.drinks === undefined) {
-          showAlert('no drinks found');
+          showAlert('There were no meals found with that search term. Please try again.');
       }
       else {
           console.log(response.drinks)
@@ -314,6 +314,7 @@ function displaySingleMeal(mealToDisplay) {
   mealDisplay.append(mealToDisplay.meals[0].strInstructions);
   // include a clearfix div to make the display look nice 
   mealDisplay.append("<div style='clear: both;'></div>");
+  mealDisplay.show();
 }
 
 function displaySingleDrink(response) {
@@ -371,6 +372,7 @@ function displaySingleDrink(response) {
   drinkDisplay.append(response.drinks[0].strInstructions);
   // include a clearfix div to make the display look nice 
   drinkDisplay.append("<div style='clear: both;'></div>");
+  drinkDisplay.show();
 }
 
 //--------------------------------------------------
@@ -455,8 +457,8 @@ function showAlert(alertText) {
 
   // define the variables that center the div on the page based on the height and width of the page,
   //  and the height and width of the alert div. 
-  var alertTop = Math.floor((($(window).height())/2)-50);       // Div is 100px wide
-  var alertLeft = Math.floor((($(window).width())/2) - 225);    // Div is 450px wide. 
+  var alertTop = Math.floor((($(window).height())/2) - 60);       // Div is 120px wide
+  var alertLeft = Math.floor((($(window).width())/2) - 190);    // Div is 380px wide. 
 
   // set the alert text
   $(".alert-text").text(alertText);
