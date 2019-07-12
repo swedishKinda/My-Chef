@@ -39,6 +39,7 @@ body {
 h3 {
     background-color: darkred;
     text-align: center;
+    padding-top: 30px;
 }
 
 .first-form {
@@ -113,6 +114,7 @@ h3 {
 
 h3 {
     font-family: 'Cedarville Cursive', cursive;
+    padding-top: 15px;
 }
 
 #ingredient-search {
