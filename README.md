@@ -18,7 +18,13 @@
   HTML:         Everybody
 
 # How to Edit
-  If you want to edit this code. Just open any of the files and copy and paste the code into any coding program of your choice or perform   a git pull.
+  - Click on green button that says "Clone or download"
+  - Download zip then extract all
+  - Then open with text editor of your choice
+  
+# Instructions
+  Click on "I'm Hungry" for food or "I'm Thirsty" for drink. Click on random meal or random drink to render random meal or random drink. Or, enter in drink or food ingredient to get a menu of all items in api(s) that have said ingredient in recipe. Just click on what you would like to eat or drink and a step-by-step recipe will be displayed.
+**Scroll down to see recipe**
 
 # Prequisites
   Make sure you have a current updated browser.
