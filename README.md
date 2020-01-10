@@ -1,5 +1,5 @@
 # Link
-  https://chris284891.github.io/My-Chef/
+  https://swedishkinda.github.io/My-Chef/
 
 # My Chef
   • My Chef is a Javascript application that essentially returns a list of drink or meal recipes based on a given ingredient.
